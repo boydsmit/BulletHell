@@ -10,8 +10,6 @@ namespace Player
 		private PlayerShoot _playerShoot;
 		private PlayerMove _playerMove;
 
-		// Update is called once per frame
-
 		private void Start()
 		{
 			_playerMove = GetComponent<PlayerMove>();

@@ -6,22 +6,13 @@ namespace Player
 {
 	public class PlayerShoot : MonoBehaviour
 	{
-
-		// Use this for initialization
-		void Start()
-		{
-
-		}
-
-		// Update is called once per frame
-		void Update()
-		{
-
-		}
-
+		
+		[SerializeField]
+		private GameObject _bullet;
+		
 		public void Shoot()
 		{
-			print("pew");
+			Instantiate(_bullet);
 		}
 	}
 }
