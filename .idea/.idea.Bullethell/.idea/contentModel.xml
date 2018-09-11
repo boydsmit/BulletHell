@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Boyd smit\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_Bullethell.-1878859073.00" t="ExcludeRecursive" />
-    <e p="D:\Unity projects\Bullethell" t="IncludeRecursive">
+    <e p="C:\Users\Boyd smit\.Rider2018.1\system\resharper-host\local\Transient\ReSharperHost\v12\SolutionCaches\_Bullethell.183425488.00" t="ExcludeRecursive" />
+    <e p="D:\Bullethell" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets\Scripts" t="Include">
         <e p="Player" t="Include">
           <e p="InputManager.cs" t="Include" />
           <e p="PlayerMove.cs" t="Include" />
+          <e p="PlayerShoot.cs" t="Include" />
         </e>
       </e>
       <e p="Bullethell.sln" t="IncludeFlat" />

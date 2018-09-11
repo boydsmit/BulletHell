@@ -7,7 +7,7 @@ namespace Player
 
 	public class InputManager : MonoBehaviour
 	{
-
+		private PlayerShoot _playerShoot;
 		private PlayerMove _playerMove;
 
 		// Update is called once per frame
@@ -15,9 +15,16 @@ namespace Player
 		private void Start()
 		{
 			_playerMove = GetComponent<PlayerMove>();
+			_playerShoot = GetComponent<PlayerShoot>();
 		}
 
 		void Update()
+		{
+			CheckSlowMode();
+			CheckShoot();
+		}
+
+		private void CheckSlowMode()
 		{
 			if (Input.GetKey(KeyCode.LeftShift))
 			{
@@ -27,6 +34,14 @@ namespace Player
 			else
 			{
 				_playerMove.NormalMode();
+			}
+		}
+
+		private void CheckShoot()
+		{
+			if (Input.GetKey(KeyCode.Z) || Input.GetKey(KeyCode.Mouse0))
+			{
+				_playerShoot.Shoot();
 			}
 		}
 	}
