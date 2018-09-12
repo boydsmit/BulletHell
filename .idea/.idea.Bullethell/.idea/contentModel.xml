@@ -5,6 +5,10 @@
     <e p="D:\Bullethell" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets\Scripts" t="Include">
+        <e p="Enemy" t="Include">
+          <e p="CheckEnemy.cs" t="Include" />
+          <e p="Enemies.cs" t="Include" />
+        </e>
         <e p="Player" t="Include">
           <e p="InputManager.cs" t="Include" />
           <e p="PlayerMove.cs" t="Include" />
