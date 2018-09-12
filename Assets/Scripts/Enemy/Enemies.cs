@@ -1,8 +1,10 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
+using Image = UnityEngine.UI.Image;
 
 namespace Enemy
 {
@@ -13,5 +15,7 @@ namespace Enemy
 		public int Weapons;
 
 		public Sprite SpriteImage;
+
+		public bool Moving;
 	}
 }

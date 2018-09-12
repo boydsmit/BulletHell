@@ -15,6 +15,7 @@
           <e p="PlayerShoot.cs" t="Include" />
         </e>
         <e p="Projectiles" t="Include">
+          <e p="BulletTypes.cs" t="Include" />
           <e p="PlayerBullet.cs" t="Include" />
         </e>
       </e>

@@ -25,7 +25,7 @@ namespace Enemy
 			
 			Sprite.sprite = EnemyType.SpriteImage;
 
-			print(_health + " " + _weapons);
+			
 		}
 
 
