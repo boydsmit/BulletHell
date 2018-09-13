@@ -12,7 +12,7 @@ namespace Projectiles
     [CreateAssetMenu(fileName = "New Bullet", menuName = "Bullets" )]	
     public class BulletTypes : ScriptableObject
     {
-        public int Speed;
+        public float Speed;
 
         public enum Direction
         {
