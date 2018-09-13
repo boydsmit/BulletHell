@@ -16,12 +16,14 @@ namespace Projectiles
 
         public enum Direction
         {
+            Up,
+            MidLeftU,
             Left, 
-            MidLeft, 
+            MidLeftD, 
             Down, 
-            MidRight, 
-            Right
-            
+            MidRightD, 
+            Right,
+            MidRightU
         }
         
         public Image Sprite;
