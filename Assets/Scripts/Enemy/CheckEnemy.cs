@@ -1,33 +1,23 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Enemy;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 namespace Enemy
 {
+    public class CheckEnemy : MonoBehaviour
+    {
+        public Enemies EnemyType;
 
-	public class CheckEnemy : MonoBehaviour
-	{
+        private int _health;
+        private int _weapons;
 
-		public Enemies EnemyType;
+        public Image Sprite;
 
-		private int _health;
-		private int _weapons;
+        void Start()
+        {
+            _health = EnemyType.Health;
+            _weapons = EnemyType.Weapons;
 
-		public Image Sprite;
-		
-		void Start()
-		{
-			_health = EnemyType.Health;
-			_weapons = EnemyType.Weapons;
-
-			
-			Sprite.sprite = EnemyType.SpriteImage;
-
-			
-		}
-
-
-	}
+            Sprite.sprite = EnemyType.SpriteImage;
+        }
+    }
 }

@@ -1,47 +1,41 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Player
 {
+    public class PlayerMove : MonoBehaviour
+    {
+        private Rigidbody2D _rb;
 
-	public class PlayerMove : MonoBehaviour
-	{
+        [SerializeField] private float _initialMoveSpd;
 
-		private Rigidbody2D _rb;
+        private float _moveSpeed;
 
-		[SerializeField] private float _initialMoveSpd;
+        void Start()
+        {
+            _rb = GetComponent<Rigidbody2D>();
+            _moveSpeed = _initialMoveSpd;
+        }
 
-		private float _moveSpeed;
+        void Move(float x, float y)
+        {
+            _rb.velocity = new Vector2(x, y).normalized * _moveSpeed * Time.deltaTime;
+        }
 
-		void Start()
-		{
-			_rb = GetComponent<Rigidbody2D>();
-			_moveSpeed = _initialMoveSpd;
+        void Update()
+        {
+            float x = Input.GetAxisRaw("Horizontal");
+            float y = Input.GetAxisRaw("Vertical");
+            Move(x, y);
+        }
 
-		}
+        public void Slowmode()
+        {
+            _moveSpeed = _initialMoveSpd / 2;
+        }
 
-		void Move(float x, float y)
-		{
-			_rb.velocity = new Vector2(x, y).normalized * _moveSpeed * Time.deltaTime;
-		}
-
-		void Update()
-		{
-
-			float x = Input.GetAxisRaw("Horizontal");
-			float y = Input.GetAxisRaw("Vertical");
-			Move(x, y);
-		}
-
-		public void Slowmode()
-		{
-			_moveSpeed = _initialMoveSpd / 2;
-		}
-
-		public void NormalMode()
-		{
-			_moveSpeed = _initialMoveSpd;
-		}
-	}
+        public void NormalMode()
+        {
+            _moveSpeed = _initialMoveSpd;
+        }
+    }
 }
